@@ -1,11 +1,6 @@
-<?php 
-use Illuminate\Support\Facades\Route; 
-use App\Http\Controllers\ProductController;   // ← Cambia si tu controlador se llama diferente 
+<?php
 
-// Ruta principal (opcional, pero buena práctica) 
-Route::get('/', function () { 
-return redirect()->route('products.index'); 
-}); 
+use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Route;
 
-// Ruta de recurso completa para productos 
-Route::resource('products', ProductController::class); 
+Route::resource('products', ProductController::class);
